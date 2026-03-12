@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChefBot — AI Restaurant Chatbot</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">Chef<span>Bot</span></div>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#demo">Demo</a></li>
+      <li><a href="#how">How It Works</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('ci').focus()">Order Now →</button>
+    <button class="nav-ham" id="hamBtn"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="#features">Features</a>
+  <a href="#demo">Live Demo</a>
+  <a href="#how">How It Works</a>
+  <a href="https://fiverr.com/s/e6aZVVP" target="_blank">Hire Me →</a>
+</div>
+<section class="hero" id="demo">
+  <div class="hero-left">
+    <div class="hero-tag"><span class="dot"></span>🍕 AI Restaurant Chatbot</div>
+    <h1>Order Food <em>Instantly</em> Through Chat</h1>
+    <p>AI chatbot that takes food orders, shows menu, handles delivery tracking — making ordering fun and effortless.</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="document.getElementById('ci').focus()">Try Live Demo</button>
+      <a href="https://fiverr.com/s/e6aZVVP" target="_blank" class="btn-ghost">Get This Bot →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="hv">40%</div><div class="hl">More Orders</div></div>
+      <div class="hstat"><div class="hv">24/7</div><div class="hl">Always Open</div></div>
+      <div class="hstat"><div class="hv">30min</div><div class="hl">Avg Delivery</div></div>
+    </div>
+  </div>
+  <div class="chat-widget">
+    <div class="cw-header">
+      <div class="cw-av">🍕</div>
+      <div>
+        <div class="cw-name">ChefBot — Bella Italia</div>
+        <div class="cw-status"><span class="dot"></span>Online — Taking Orders Now</div>
+      </div>
+    </div>
+    <div class="cw-msgs" id="msgs"></div>
+    <div class="quick-r" id="qr">
+      <button class="qr-btn" onclick="sq('Show menu')">🍽️ Menu</button>
+      <button class="qr-btn" onclick="sq('I want pizza')">🍕 Pizza</button>
+      <button class="qr-btn" onclick="sq('Show burgers')">🍔 Burgers</button>
+      <button class="qr-btn" onclick="sq('Best deals')">🔥 Deals</button>
+    </div>
+    <div class="cw-input">
+      <input type="text" id="ci" placeholder="Order food or ask about menu..." autocomplete="off">
+      <button class="cw-send" onclick="send()">➤</button>
+    </div>
+    <div class="cart-bar">
+      <div class="cart-info">🛒 Order: <b id="oc">0 items — $0.00</b></div>
+      <button class="cart-checkout" onclick="placeOrder()">Place Order 🚗</button>
+    </div>
+  </div>
+</section>
+<section class="section" id="features">
+  <div class="sec-tag">What It Does</div>
+  <div class="sec-title">Key Features</div>
+  <div class="feat-grid">
+    <div class="feat-card"><div class="feat-icon">🍽️</div><div class="feat-title">Interactive Menu</div><div class="feat-desc">Browse full menu with photos, descriptions and prices.</div></div>
+    <div class="feat-card"><div class="feat-icon">🛒</div><div class="feat-title">Order Management</div><div class="feat-desc">Complete order flow — add items, confirm and pay in chat.</div></div>
+    <div class="feat-card"><div class="feat-icon">🚗</div><div class="feat-title">Delivery Tracking</div><div class="feat-desc">Real-time updates from kitchen to doorstep.</div></div>
+    <div class="feat-card"><div class="feat-icon">🔥</div><div class="feat-title">Daily Deals</div><div class="feat-desc">Show today's specials to increase average order value.</div></div>
+    <div class="feat-card"><div class="feat-icon">🥗</div><div class="feat-title">Dietary Filters</div><div class="feat-desc">Filter vegetarian, vegan, halal, gluten-free options.</div></div>
+    <div class="feat-card"><div class="feat-icon">⭐</div><div class="feat-title">Reviews & Ratings</div><div class="feat-desc">Collect customer feedback to improve quality.</div></div>
+  </div>
+</section>
+<section class="section" id="how">
+  <div class="sec-tag">Simple Process</div>
+  <div class="sec-title">How It Works</div>
+  <div class="steps-grid">
+    <div class="step-card"><div class="step-num">1</div><div class="step-title">Customer Chats</div><div class="step-desc">Opens chat and browses the menu</div></div>
+    <div class="step-card"><div class="step-num">2</div><div class="step-title">Adds Items</div><div class="step-desc">Taps to add food items to order</div></div>
+    <div class="step-card"><div class="step-num">3</div><div class="step-title">Confirms Order</div><div class="step-desc">Reviews cart and places the order</div></div>
+    <div class="step-card"><div class="step-num">4</div><div class="step-title">Food Delivered!</div><div class="step-desc">Gets real-time updates until delivery</div></div>
+  </div>
+</section>
+<section class="section tech-section">
+  <div class="sec-tag">Technology</div>
+  <div class="sec-title">Built With</div>
+  <div class="tech-pills"><div class="tech-pill">HTML5</div><div class="tech-pill">CSS3</div><div class="tech-pill">JavaScript</div><div class="tech-pill">Payment API</div><div class="tech-pill">Maps API</div><div class="tech-pill">AI NLP</div></div>
+</section>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Chef<span>Bot</span></div>
+    <div class="footer-links">
+      <a href="#features">Features</a><a href="#demo">Demo</a>
+      <a href="https://fiverr.com/s/e6aZVVP" target="_blank">Hire Me</a>
+    </div>
+    <div class="footer-copy">Built by <span>Ubaid Ullah</span> | fiverr.com/s/e6aZVVP</div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
